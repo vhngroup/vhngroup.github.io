@@ -7,10 +7,10 @@ I don't wait for classes to learn how to build. I find problems, figure out the 
 ---
 
 ## 1. The Business Engine: VHNGROUP E-Commerce Orchestration
-**Links:** [vhngroup.com](https://vhngroup.com) | [Nequi API Repo](https://github.com/vhngroup/nequi)
+**Links:** [vhngroup.com](https://vhngroup.com)
 
 **What I built:**  
-I founded and single-handedly run a network of 5 live WordPress/WooCommerce sites. To keep them running smoothly on a Linux server without a dev team, I built a custom 243-line Bash orchestration pipeline (`Plugins_update_v2.sh` and `Orquestador.sh`). It automates inventory syncs with MercadoLibre, generates sitemaps, updates plugins, cleans the databases, and purges caches nightly via cron. I also wrote a custom Cloudflare WAF ruleset to drop malicious traffic and implemented an AWS Signature V4 payment gateway in raw PHP to connect to Nequi (Colombia's leading fintech).
+I founded and single-handedly run a network of 5 live WordPress/WooCommerce sites. To keep them running smoothly on a Linux server without a dev team, I built a custom 243-line Bash orchestration pipeline (`Plugins_update_v2.sh` and `Orquestador.sh`). It automates inventory syncs with MercadoLibre, generates sitemaps, updates plugins, cleans the databases, and purges caches nightly via cron. I also wrote a custom Cloudflare WAF ruleset to drop malicious traffic.
 
 **The Challenge:**  
 Serving **458,000+ monthly requests** on a shared-but-optimized server means memory leaks or scraper bots will take the sites down. Manual updates were costing me 4 hours a week. Furthermore, Nequi's API requires AWS SigV4 authentication, which didn't have a simple PHP drop-in library for my specific WooCommerce setup.
@@ -43,7 +43,7 @@ I learned how vector embeddings work, how to chunk documents effectively, and ho
 ---
 
 ## 3. Computer Vision Arcades: Brick Breaker MediaPipe
-**Links:** [Brick Breaker Repo](https://github.com/vhngroup/Brick_Breaker_MediaPipe) 
+**Links:** [Brick Breaker Repo](https://github.com/vhngroup/brick_breaker_game) 
 
 **What I built:**  
 A fully playable "Brick Breaker" arcade game controlled entirely by hand gestures in front of a webcam. Built from scratch using Python, OpenCV, and Google's MediaPipe.
@@ -78,20 +78,20 @@ Enterprise system architecture and Windows COM automation. I learned how to reve
 ---
 
 ## 5. Machine Learning Infrastructure: Zero-Shot Voice Cloning
-**Links:** [F5-TTS Voice Project Repo](https://github.com/vhngroup/Python/tree/main/Voice_Project)
+**Links:** [F5-TTS Voice Project Repo](https://github.com/vhngroup/voice_project)
 
 **What I built:**  
-A Dockerized Text-to-Speech (TTS) service using the F5-TTS model, capable of zero-shot voice cloning. 
+I implemented and configured a zero-shot voice cloning pipeline utilizing the F5-TTS model, specifically engineered to run on Intel hardware instead of standard NVIDIA GPUs.
 
 **The Challenge:**  
-Setting up complex Python ML dependencies (PyTorch, CUDA, specific audio libraries) natively is a nightmare of dependency conflicts. I needed a way to run this model reliably on any machine without breaking the host environment.
+Executing modern AI audio models outside the standard CUDA ecosystem is notoriously difficult. I had to manually configure a PyTorch environment targeted for Intel XPU acceleration. This involved handling experimental nightly builds and integrating Intel-specific compute libraries (`intel-pti`, `umf`, `tcmlib`) to force the hardware to process the model's tensor operations.
 
 **What I learned:**  
-Advanced Docker containerization for machine learning workloads. I learned how to manage large model weights within containers, configure hardware passthrough, and expose local ML models as consumable APIs.
+Hardware-level ML configuration. I learned how to adapt cutting-edge machine learning research to non-standard compute architectures and resolve complex dependency graphs to make experimental AI tools work in the real world.
 
 **Results & Traction:**  
-- A production-ready, locally hosted voice generation service that doesn't rely on expensive or rate-limited third-party APIs.
-
+- A functioning environment that successfully bootstraps the Intel XPU stack and prepares the F5-TTS model for local voice generation without relying on cloud APIs.
+  
 ---
 
 ## 6. B2B Automated Scraping Pipelines
