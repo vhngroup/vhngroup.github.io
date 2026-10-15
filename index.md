@@ -1,6 +1,6 @@
 # Víctor Noguera — Builder Portfolio
 
-📍 Colombia | ✉️ info@vhngroup.com | 🐙 [github.com/vhngroup](https://github.com/vhngroup) | 🔗 [LinkedIn](https://linkedin.com/in/victor--noguera)
+📍 Colombia | ✉️ info@vhngroup.com | 🐙 [github.com/vhngroup](https://github.com/vhngroup) | 🔗 [LinkedIn](https://www.linkedin.com/in/victornoguera/) | 🔗 [Platzi](https://platzi.com/p/victor__noguera/)
 
 I don't wait for classes to learn how to build. I find problems, figure out the stack required to solve them, and ship. I am a self-taught full-stack developer and AI engineer from Colombia. This portfolio details the production systems, AI integrations, and automations I have personally built.
 
